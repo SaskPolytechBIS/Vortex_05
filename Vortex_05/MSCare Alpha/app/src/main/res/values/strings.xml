@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">MS Care RC</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="notify_dialog_journaling_title">Journaling Notification</string>
+
+    <string name="title_hint">Title</string>
+    <string name="description_hint">Description</string>
+    <string name="questions_text">Questions for the Doctor</string>
+    <string name="notes_text">Notes</string>
+    <string name="todo_text">To do</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="ok_button">OK</string>
+
+    <string name="settings_title">Settings</string>
+    <string name="theme_title">Theme</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+
+</resources>

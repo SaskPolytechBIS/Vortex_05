@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/navigation_symptoms_journaling"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/baseline_accessibility_24"
+        android:title="Journaling" />
+
+    <item
+        android:id="@+id/navigation_notes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/baseline_library_books_24"
+        android:title="Notes" />
+
+    <item
+        android:id="@+id/navigation_medtrack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/baseline_medication_24"
+        android:title="MedTrack" />
+
+
+
+    <item
+        android:id="@+id/navigation_faqs"
+        android:icon="@drawable/baseline_menu_24"
+        android:title="Info" />
+
+
+</menu>

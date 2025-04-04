@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnSave"
+        app:layout_constraintHorizontal_bias="0.887"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.978" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="14dp"
+        android:text="OK"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/editMed"
+        android:layout_width="284dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="2dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/editDosage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.357"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/editDosage"
+        android:layout_width="284dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:hint="Dosage"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/editTimes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.357"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTimes"
+        android:layout_width="283dp"
+        android:layout_height="46dp"
+        android:ems="10"
+        android:hint="How many times?"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/editFoods"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.363"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editFoods"
+        android:layout_width="280dp"
+        android:layout_height="159dp"
+        android:layout_marginBottom="6dp"
+        android:ems="10"
+        android:hint="Foods to avoid"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toTopOf="@+id/editDrinks"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.353"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editDrinks"
+        android:layout_width="279dp"
+        android:layout_height="122dp"
+        android:ems="10"
+        android:hint="Drinks to avoid"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toTopOf="@+id/editTextReminderMessage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.359"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextReminderMessage"
+        android:layout_width="156dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="24dp"
+        android:hint="Reminder message"
+        app:layout_constraintBottom_toTopOf="@+id/rlDays"
+        app:layout_constraintRight_toLeftOf="@id/btn_set_reminder"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_set_reminder"
+        android:layout_width="114dp"
+        android:layout_height="95dp"
+        android:layout_marginEnd="36dp"
+        android:text="Set Reminder"
+        app:layout_constraintBottom_toTopOf="@+id/rlDays"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/editTextReminderMessage" />
+
+    <EditText
+        android:id="@+id/txtDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Date"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="39dp"
+        tools:layout_editor_absoluteY="390dp" />
+    <!-- Repeat on days of the week checkboxes -->
+    <RelativeLayout
+        android:id="@+id/rlDays"
+        android:layout_width="289dp"
+        android:layout_height="86dp"
+        android:layout_marginBottom="4dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/btnCancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.384"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <CheckBox
+            android:id="@+id/check_monday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="220dp"
+            android:text="Mon" />
+
+        <CheckBox
+            android:id="@+id/check_tuesday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="65dp"
+            android:text="Tue" />
+
+        <CheckBox
+            android:id="@+id/check_wednesday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="120dp"
+            android:text="Wed" />
+
+        <CheckBox
+            android:id="@+id/check_thursday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="180dp"
+            android:text="Thu" />
+
+        <CheckBox
+            android:id="@+id/check_friday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="240dp"
+            android:text="Fri" />
+
+        <CheckBox
+            android:id="@+id/check_saturday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="40dp"
+            android:text="Sat" />
+
+        <CheckBox
+            android:id="@+id/check_sunday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="190dp"
+            android:layout_marginTop="40dp"
+            android:text="Sun" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.mscarealpha.ui.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_symptoms_journaling"
+        android:name="com.example.mscarealpha.ui.symptoms.SymptomsFragment"
+        android:label="Symptoms Journaling"
+        tools:layout="@layout/fragment_symptoms_journaling" />
+
+    <fragment
+        android:id="@+id/navigation_notes"
+        android:name="com.example.mscarealpha.ui.notes.AppointmentNotesFragment"
+        android:label="Appointment Notes"
+        tools:layout="@layout/fragment_notes" />
+    <fragment
+        android:id="@+id/navigation_medtrack"
+        android:name="com.example.mscarealpha.ui.medtrack.MedTrackFragment"
+        android:label="Medication Tracker"
+        tools:layout="@layout/fragment_medtrack" />
+
+    <fragment
+        android:id="@+id/navigation_faqs"
+        android:name="com.example.mscarealpha.ui.faqs.MSFAQsFragment"
+        android:label="Additional Info"
+        tools:layout="@layout/fragment_faqs" />
+</navigation>

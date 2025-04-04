@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4"
+        android:visibility="gone"
+        tools:layout_editor_absoluteX="201dp"
+        tools:layout_editor_absoluteY="520dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="370dp"
+        android:layout_height="680dp"
+        android:paddingBottom="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.100" />
+
+    <RelativeLayout
+        android:layout_width="264dp"
+        android:layout_height="281dp"
+        android:layout_marginBottom="96dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.918"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_reminders"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="20dp"
+            android:clickable="true"
+            android:src="@drawable/baseline_notifications_24"
+            android:visibility="gone"
+            app:fabSize="mini" />
+
+        <TextView
+            android:id="@+id/viewReminders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/fab_bg"
+            android:fontFamily="@font/dm_sans"
+            android:padding="2dp"
+            android:shadowColor="#000000"
+            android:shadowRadius="1"
+            android:text="Set Reminder"
+            android:textAlignment="textEnd"
+            android:textColor="#000000"
+            android:visibility="gone" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_add_medtrack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="195dp"
+            android:layout_marginTop="80dp"
+            android:clickable="true"
+            android:src="@android:drawable/ic_input_add"
+            app:fabSize="mini" />
+
+        <TextView
+            android:id="@+id/viewAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="95dp"
+            android:background="@drawable/fab_bg"
+            android:fontFamily="@font/dm_sans"
+            android:padding="2dp"
+            android:shadowColor="#000000"
+            android:shadowRadius="1"
+            android:text="Add new Medication"
+            android:textAlignment="viewEnd"
+            android:textColor="#000000" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_clear_all"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="195dp"
+            android:layout_marginTop="140dp"
+            android:clickable="true"
+            android:src="@android:drawable/ic_menu_delete"
+            app:fabSize="mini"
+            tools:layout_editor_absoluteX="327dp"
+            tools:layout_editor_absoluteY="582dp"/>
+
+        <TextView
+            android:id="@+id/viewDel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="155dp"
+            android:background="@drawable/fab_bg"
+            android:fontFamily="@font/dm_sans"
+            android:padding="2dp"
+            android:shadowColor="#000000"
+            android:shadowRadius="1"
+            android:text="Delete all"
+            android:textAlignment="textEnd"
+            android:textColor="#000000" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_open_close"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="195dp"
+            android:layout_marginTop="200dp"
+            android:clickable="true"
+            android:src="@drawable/baseline_keyboard_arrow_up_24"
+            app:fabSize="normal" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="750dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone">
+
+        </WebView>
+
+        <RelativeLayout
+            android:layout_width="264dp"
+            android:layout_height="281dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="200dp"
+                android:layout_marginTop="20dp"
+                android:clickable="true"
+                android:src="@drawable/baseline_arrow_outward_24"
+                app:fabSize="mini" />
+
+
+            <TextView
+                android:id="@+id/viewContact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/fab_bg"
+                android:fontFamily="@font/dm_sans"
+                android:padding="2dp"
+                android:shadowColor="#000000"
+                android:shadowRadius="1"
+                android:text="Go to Mental Health Services"
+                android:textAlignment="textEnd"
+                android:textColor="#000000" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_call"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="200dp"
+                android:layout_marginTop="80dp"
+                android:clickable="true"
+                android:src="@drawable/baseline_phone_24"
+                app:fabSize="mini" />
+
+            <TextView
+                android:id="@+id/viewCall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="95dp"
+                android:background="@drawable/fab_bg"
+                android:fontFamily="@font/dm_sans"
+                android:padding="2dp"
+                android:shadowColor="#000000"
+                android:shadowRadius="1"
+                android:text="Call 9-8-8"
+                android:textAlignment="viewEnd"
+                android:textColor="#000000" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabAbout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="200dp"
+                android:layout_marginTop="140dp"
+                android:layout_marginBottom="5dp"
+                android:clickable="true"
+                app:fabSize="mini"
+                app:srcCompat="@android:drawable/ic_dialog_info" />
+
+            <TextView
+                android:id="@+id/viewAbout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="90dp"
+                android:layout_marginTop="155dp"
+                android:background="@drawable/fab_bg"
+                android:fontFamily="@font/dm_sans"
+                android:padding="2dp"
+                android:shadowColor="#000000"
+                android:shadowRadius="1"
+                android:text="About MS Care"
+                android:textAlignment="textEnd"
+                android:textColor="#000000" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_open_close_2"
+                android:layout_width="wrap_content"
+                android:layout_height="54dp"
+                android:layout_marginLeft="195dp"
+                android:layout_marginTop="200dp"
+                android:clickable="true"
+                android:src="@drawable/baseline_keyboard_arrow_up_24"
+                app:fabSize="normal" />
+
+        </RelativeLayout>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvAbout"
+            android:layout_width="360dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="8dp"
+            app:cardBackgroundColor="#145D68"
+            app:cardCornerRadius="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.478"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvCall">
+
+            <TextView
+                android:id="@+id/txtAbout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="65dp"
+                android:text="About MS Care"
+                android:textColor="#FFFFFF"
+                android:textSize="25dp" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="42dp"
+                android:layout_height="55dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                app:srcCompat="@drawable/baseline_info_24" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvMSFAQs"
+            android:layout_width="360dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="#145D68"
+            app:cardCornerRadius="18dp"
+            app:layout_constraintBottom_toTopOf="@+id/cvContact"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.478"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txtMSFAQs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="65dp"
+                android:fontFamily="@font/dm_sans"
+                android:text="Common Questions \nfrom MS Canada"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp" />
+
+            <ImageView
+                android:id="@+id/imgFAQs"
+                android:layout_width="42dp"
+                android:layout_height="55dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                app:srcCompat="@drawable/faqs_icon" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvContact"
+            android:layout_width="360dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="8dp"
+            app:cardBackgroundColor="#145D68"
+            app:cardCornerRadius="18dp"
+            app:layout_constraintBottom_toTopOf="@id/cvCall"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.478"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cvMSFAQs">
+
+            <TextView
+                android:id="@+id/txtContact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="65dp"
+                android:fontFamily="@font/dm_sans"
+                android:text="Mental Health Services"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp" />
+
+            <ImageView
+                android:id="@+id/imgContact"
+                android:layout_width="42dp"
+                android:layout_height="55dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                app:srcCompat="@drawable/baseline_person_24" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvCall"
+            android:layout_width="360dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="8dp"
+            app:cardBackgroundColor="#145D68"
+            app:cardCornerRadius="18dp"
+            app:layout_constraintBottom_toTopOf="@id/cvAbout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.478"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvContact">
+
+            <TextView
+                android:id="@+id/txtCall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="65dp"
+                android:text="Call 9-8-8"
+                android:textColor="#FFFFFF"
+                android:textSize="25dp" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="42dp"
+                android:layout_height="55dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                app:srcCompat="@drawable/baseline_phone_24" />
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
