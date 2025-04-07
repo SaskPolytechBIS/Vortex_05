@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9ee8f8cb-354f-4f79-b36c-c9910d82775b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/MSCare Alpha/.idea/AndroidProjectSystem.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MSCare Alpha/.idea/AndroidProjectSystem.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MSCare Alpha/.idea/deploymentTargetSelector.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MSCare Alpha/.idea/deploymentTargetSelector.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MSCare Alpha/.idea/migrations.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MSCare Alpha/.idea/migrations.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MSCare Alpha/.idea/runConfigurations.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MSCare Alpha/.idea/runConfigurations.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MSCare Alpha/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MSCare Alpha/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MSCare Alpha/app/src/main/java/com/example/mscarealpha/ui/home/HomeFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/MSCare Alpha/app/src/main/java/com/example/mscarealpha/ui/home/HomeFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MSCare Alpha/app/src/main/res/drawable/text_bg6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MSCare Alpha/app/src/main/res/drawable/text_bg6.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MSCare Alpha/app/src/main/res/layout/fragment_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MSCare Alpha/app/src/main/res/layout/fragment_home.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MSCare Alpha/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/MSCare Alpha/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MSCare Alpha/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/MSCare Alpha/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MSCare Alpha/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/MSCare Alpha/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MSCare Alpha/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/MSCare Alpha/gradlew.bat" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "AllmightyKrillin"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/SaskPolytechBIS/Vortex_05.git",
+    "accountId": "0aa998d4-166c-49ed-9f02-ec8552cdc8eb"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2vHIzNmLNeYQefqAu7YbQwiuEGW" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "com.google.services.firebase.aqiPopupShown": "true",
+    "git-widget-placeholder": "sujal",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/kunwa/Downloads/Vortex_05/Vortex_05/MSCare Alpha"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9ee8f8cb-354f-4f79-b36c-c9910d82775b" name="Changes" comment="" />
+      <created>1743795833580</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1743795833580</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
