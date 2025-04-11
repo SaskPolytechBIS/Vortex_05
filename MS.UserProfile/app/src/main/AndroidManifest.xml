@@ -38,6 +38,16 @@
             android:name=".ProfileActivity"
             android:exported="true" />
 
+        <!-- Game Menu Screen -->
+        <activity
+            android:name=".GameMenuActivity"
+            android:exported="true" />
+
+        <!-- NeuroCycle Game Screen -->
+        <activity
+            android:name=".NeuroCycleGameActivity"
+            android:exported="true" /> <!-- This is the new activity you added -->
+
     </application>
 
 </manifest>

@@ -1,6 +1,5 @@
 package com.example.msuserprofile;
 
-
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -12,13 +11,17 @@ public class ProfileActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
+        setContentView(R.layout.activity_profile); // The layout file for ProfileActivity
 
-        profileDisplay = findViewById(R.id.profileDisplay);
+        // Make sure the ID matches what you have in the XML
+        profileDisplay = findViewById(R.id.profileDisplay);  // This should match the ID in your XML
+
+        // Load profile data or display something in the profileDisplay TextView
         loadProfile();
     }
 
     private void loadProfile() {
+        // Retrieve data from SharedPreferences
         SharedPreferences prefs = getSharedPreferences("UserPrefs", MODE_PRIVATE);
         String profileText = "Email: " + prefs.getString("email", "N/A") + "\n" +
                 "Gender: " + prefs.getString("gender", "N/A") + "\n" +
@@ -28,7 +31,7 @@ public class ProfileActivity extends AppCompatActivity {
                 "First Symptom: " + prefs.getString("symptom", "N/A") + "\n" +
                 "Diagnosis Date: " + prefs.getString("diagnosisDate", "N/A");
 
+        // Set the text to the profileDisplay TextView
         profileDisplay.setText(profileText);
     }
 }
-
