@@ -1,20 +1,18 @@
 package com.example.msuserprofile;
 
-
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
-
 import java.util.Random;
 
 public class NeuroCycleGameActivity extends AppCompatActivity {
 
-    private TextView tvColorPrompt, tvResult;
+    private TextView tvColorPrompt, tvResult, tvScore;
     private String currentColor = "";
     private final String[] colors = {"RED", "GREEN", "BLUE"};
+    private int score = 0;
+    private int attempts = 0;
     private final Random random = new Random();
 
     @Override
@@ -24,38 +22,33 @@ public class NeuroCycleGameActivity extends AppCompatActivity {
 
         tvColorPrompt = findViewById(R.id.tvColorPrompt);
         tvResult = findViewById(R.id.tvResult);
+        tvScore = findViewById(R.id.tvScore);
+
         Button btnRed = findViewById(R.id.btnRed);
         Button btnGreen = findViewById(R.id.btnGreen);
         Button btnBlue = findViewById(R.id.btnBlue);
 
-        setNewColorPrompt();
+        btnRed.setOnClickListener(v -> checkAnswer("RED"));
+        btnGreen.setOnClickListener(v -> checkAnswer("GREEN"));
+        btnBlue.setOnClickListener(v -> checkAnswer("BLUE"));
 
-
-
-        View.OnClickListener buttonClickListener = view -> {
-
-
-            String clickedColor = "";
-
-            if (view.getId() == R.id.btnRed) clickedColor = "RED";
-            else if (view.getId() == R.id.btnGreen) clickedColor = "GREEN";
-            else if (view.getId() == R.id.btnBlue) clickedColor = "BLUE";
-
-            if (clickedColor.equals(currentColor)) {
-                tvResult.setText("✅ Correct!");
-            } else {
-                tvResult.setText("❌ Try Again!");
-            }
-
-            setNewColorPrompt();
-        };
-
-        btnRed.setOnClickListener(buttonClickListener);
-        btnGreen.setOnClickListener(buttonClickListener);
-        btnBlue.setOnClickListener(buttonClickListener);
+        setNewPrompt();
     }
 
-    private void setNewColorPrompt() {
+    private void checkAnswer(String selectedColor) {
+        attempts++;
+        if (selectedColor.equals(currentColor)) {
+            score++;
+            tvResult.setText("✅ Correct!");
+        } else {
+            tvResult.setText("❌ Try Again!");
+        }
+
+        tvScore.setText("Score: " + score + "/" + attempts);
+        setNewPrompt();
+    }
+
+    private void setNewPrompt() {
         currentColor = colors[random.nextInt(colors.length)];
         tvColorPrompt.setText("Tap the " + currentColor + " button");
     }
