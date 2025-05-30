@@ -1,0 +1,172 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.msuserprofile"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="34"
+9        android:targetSdkVersion="35" />
+10
+11    <permission
+11-->[androidx.core:core:1.13.0] C:\Users\kunwa\.gradle\caches\8.11.1\transforms\c347674ce0e4b6093b74c6d81b86c9d3\transformed\core-1.13.0\AndroidManifest.xml:22:5-24:47
+12        android:name="com.example.msuserprofile.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+12-->[androidx.core:core:1.13.0] C:\Users\kunwa\.gradle\caches\8.11.1\transforms\c347674ce0e4b6093b74c6d81b86c9d3\transformed\core-1.13.0\AndroidManifest.xml:23:9-81
+13        android:protectionLevel="signature" />
+13-->[androidx.core:core:1.13.0] C:\Users\kunwa\.gradle\caches\8.11.1\transforms\c347674ce0e4b6093b74c6d81b86c9d3\transformed\core-1.13.0\AndroidManifest.xml:24:9-44
+14
+15    <uses-permission android:name="com.example.msuserprofile.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+15-->[androidx.core:core:1.13.0] C:\Users\kunwa\.gradle\caches\8.11.1\transforms\c347674ce0e4b6093b74c6d81b86c9d3\transformed\core-1.13.0\AndroidManifest.xml:26:5-97
+15-->[androidx.core:core:1.13.0] C:\Users\kunwa\.gradle\caches\8.11.1\transforms\c347674ce0e4b6093b74c6d81b86c9d3\transformed\core-1.13.0\AndroidManifest.xml:26:22-94
+16
+17    <application
+17-->C:\Users\kunwa\Downloads\Vortex_05\MS.UserProfile\app\src\main\AndroidManifest.xml:5:5-51:19
+18        android:allowBackup="true"
+18-->C:\Users\kunwa\Downloads\Vortex_05\MS.UserProfile\app\src\main\AndroidManifest.xml:6:9-35
+19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+19-->[androidx.core:core:1.13.0] C:\Users\kunwa\.gradle\caches\8.11.1\transforms\c347674ce0e4b6093b74c6d81b86c9d3\transformed\core-1.13.0\AndroidManifest.xml:28:18-86
+20        android:dataExtractionRules="@xml/data_extraction_rules"
+20-->C:\Users\kunwa\Downloads\Vortex_05\MS.UserProfile\app\src\main\AndroidManifest.xml:7:9-65
+21        android:debuggable="true"
+22        android:extractNativeLibs="false"
+23        android:fullBackupContent="@xml/backup_rules"
+23-->C:\Users\kunwa\Downloads\Vortex_05\MS.UserProfile\app\src\main\AndroidManifest.xml:8:9-54
+24        android:icon="@mipmap/ic_launcher"
+24-->C:\Users\kunwa\Downloads\Vortex_05\MS.UserProfile\app\src\main\AndroidManifest.xml:9:9-43
+25        android:label="@string/app_name"
+25-->C:\Users\kunwa\Downloads\Vortex_05\MS.UserProfile\app\src\main\AndroidManifest.xml:10:9-41
+26        android:roundIcon="@mipmap/ic_launcher_round"
+26-->C:\Users\kunwa\Downloads\Vortex_05\MS.UserProfile\app\src\main\AndroidManifest.xml:11:9-54
+27        android:supportsRtl="true"
+27-->C:\Users\kunwa\Downloads\Vortex_05\MS.UserProfile\app\src\main\AndroidManifest.xml:12:9-35
+28        android:testOnly="true"
+29        android:theme="@style/Theme.MSUserProfile" >
+29-->C:\Users\kunwa\Downloads\Vortex_05\MS.UserProfile\app\src\main\AndroidManifest.xml:13:9-51
+30
+31        <!-- LoginActivity: The launcher screen -->
+32        <activity
+32-->C:\Users\kunwa\Downloads\Vortex_05\MS.UserProfile\app\src\main\AndroidManifest.xml:17:9-24:20
+33            android:name="com.example.msuserprofile.LoginActivity"
+33-->C:\Users\kunwa\Downloads\Vortex_05\MS.UserProfile\app\src\main\AndroidManifest.xml:18:13-42
+34            android:exported="true" >
+34-->C:\Users\kunwa\Downloads\Vortex_05\MS.UserProfile\app\src\main\AndroidManifest.xml:19:13-36
+35            <intent-filter>
+35-->C:\Users\kunwa\Downloads\Vortex_05\MS.UserProfile\app\src\main\AndroidManifest.xml:20:13-23:29
+36                <action android:name="android.intent.action.MAIN" />
+36-->C:\Users\kunwa\Downloads\Vortex_05\MS.UserProfile\app\src\main\AndroidManifest.xml:21:17-69
+36-->C:\Users\kunwa\Downloads\Vortex_05\MS.UserProfile\app\src\main\AndroidManifest.xml:21:25-66
+37
+38                <category android:name="android.intent.category.LAUNCHER" />
+38-->C:\Users\kunwa\Downloads\Vortex_05\MS.UserProfile\app\src\main\AndroidManifest.xml:22:17-77
+38-->C:\Users\kunwa\Downloads\Vortex_05\MS.UserProfile\app\src\main\AndroidManifest.xml:22:27-74
+39            </intent-filter>
+40        </activity>
+41
+42        <!-- Registration Screen -->
+43        <activity
+43-->C:\Users\kunwa\Downloads\Vortex_05\MS.UserProfile\app\src\main\AndroidManifest.xml:27:9-29:39
+44            android:name="com.example.msuserprofile.RegisterActivity"
+44-->C:\Users\kunwa\Downloads\Vortex_05\MS.UserProfile\app\src\main\AndroidManifest.xml:28:13-45
+45            android:exported="true" />
+45-->C:\Users\kunwa\Downloads\Vortex_05\MS.UserProfile\app\src\main\AndroidManifest.xml:29:13-36
+46
+47        <!-- Consent Screen -->
+48        <activity
+48-->C:\Users\kunwa\Downloads\Vortex_05\MS.UserProfile\app\src\main\AndroidManifest.xml:32:9-34:39
+49            android:name="com.example.msuserprofile.ConsentActivity"
+49-->C:\Users\kunwa\Downloads\Vortex_05\MS.UserProfile\app\src\main\AndroidManifest.xml:33:13-44
+50            android:exported="true" />
+50-->C:\Users\kunwa\Downloads\Vortex_05\MS.UserProfile\app\src\main\AndroidManifest.xml:34:13-36
+51
+52        <!-- User Profile Screen -->
+53        <activity
+53-->C:\Users\kunwa\Downloads\Vortex_05\MS.UserProfile\app\src\main\AndroidManifest.xml:37:9-39:39
+54            android:name="com.example.msuserprofile.ProfileActivity"
+54-->C:\Users\kunwa\Downloads\Vortex_05\MS.UserProfile\app\src\main\AndroidManifest.xml:38:13-44
+55            android:exported="true" />
+55-->C:\Users\kunwa\Downloads\Vortex_05\MS.UserProfile\app\src\main\AndroidManifest.xml:39:13-36
+56
+57        <!-- Game Menu Screen -->
+58        <activity
+58-->C:\Users\kunwa\Downloads\Vortex_05\MS.UserProfile\app\src\main\AndroidManifest.xml:42:9-44:39
+59            android:name="com.example.msuserprofile.GameMenuActivity"
+59-->C:\Users\kunwa\Downloads\Vortex_05\MS.UserProfile\app\src\main\AndroidManifest.xml:43:13-45
+60            android:exported="true" />
+60-->C:\Users\kunwa\Downloads\Vortex_05\MS.UserProfile\app\src\main\AndroidManifest.xml:44:13-36
+61
+62        <!-- NeuroCycle Game Screen -->
+63        <activity
+63-->C:\Users\kunwa\Downloads\Vortex_05\MS.UserProfile\app\src\main\AndroidManifest.xml:47:9-49:39
+64            android:name="com.example.msuserprofile.NeuroCycleGameActivity"
+64-->C:\Users\kunwa\Downloads\Vortex_05\MS.UserProfile\app\src\main\AndroidManifest.xml:48:13-51
+65            android:exported="true" /> <!-- This is the new activity you added -->
+65-->C:\Users\kunwa\Downloads\Vortex_05\MS.UserProfile\app\src\main\AndroidManifest.xml:49:13-36
+66
+67        <provider
+67-->[androidx.emoji2:emoji2:1.3.0] C:\Users\kunwa\.gradle\caches\8.11.1\transforms\48cd044e98358c3428040b2e7ee60c56\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+68            android:name="androidx.startup.InitializationProvider"
+68-->[androidx.emoji2:emoji2:1.3.0] C:\Users\kunwa\.gradle\caches\8.11.1\transforms\48cd044e98358c3428040b2e7ee60c56\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
+69            android:authorities="com.example.msuserprofile.androidx-startup"
+69-->[androidx.emoji2:emoji2:1.3.0] C:\Users\kunwa\.gradle\caches\8.11.1\transforms\48cd044e98358c3428040b2e7ee60c56\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
+70            android:exported="false" >
+70-->[androidx.emoji2:emoji2:1.3.0] C:\Users\kunwa\.gradle\caches\8.11.1\transforms\48cd044e98358c3428040b2e7ee60c56\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
+71            <meta-data
+71-->[androidx.emoji2:emoji2:1.3.0] C:\Users\kunwa\.gradle\caches\8.11.1\transforms\48cd044e98358c3428040b2e7ee60c56\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+72                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+72-->[androidx.emoji2:emoji2:1.3.0] C:\Users\kunwa\.gradle\caches\8.11.1\transforms\48cd044e98358c3428040b2e7ee60c56\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
+73                android:value="androidx.startup" />
+73-->[androidx.emoji2:emoji2:1.3.0] C:\Users\kunwa\.gradle\caches\8.11.1\transforms\48cd044e98358c3428040b2e7ee60c56\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
+74            <meta-data
+74-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\kunwa\.gradle\caches\8.11.1\transforms\0f236ebef3a393681536a11b82843d71\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
+75                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+75-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\kunwa\.gradle\caches\8.11.1\transforms\0f236ebef3a393681536a11b82843d71\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
+76                android:value="androidx.startup" />
+76-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\kunwa\.gradle\caches\8.11.1\transforms\0f236ebef3a393681536a11b82843d71\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
+77            <meta-data
+77-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\kunwa\.gradle\caches\8.11.1\transforms\1e603370a8016298f3e3dc6bdb605a82\transformed\profileinstaller-1.4.0\AndroidManifest.xml:29:13-31:52
+78                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+78-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\kunwa\.gradle\caches\8.11.1\transforms\1e603370a8016298f3e3dc6bdb605a82\transformed\profileinstaller-1.4.0\AndroidManifest.xml:30:17-85
+79                android:value="androidx.startup" />
+79-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\kunwa\.gradle\caches\8.11.1\transforms\1e603370a8016298f3e3dc6bdb605a82\transformed\profileinstaller-1.4.0\AndroidManifest.xml:31:17-49
+80        </provider>
+81
+82        <receiver
+82-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\kunwa\.gradle\caches\8.11.1\transforms\1e603370a8016298f3e3dc6bdb605a82\transformed\profileinstaller-1.4.0\AndroidManifest.xml:34:9-52:20
+83            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+83-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\kunwa\.gradle\caches\8.11.1\transforms\1e603370a8016298f3e3dc6bdb605a82\transformed\profileinstaller-1.4.0\AndroidManifest.xml:35:13-76
+84            android:directBootAware="false"
+84-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\kunwa\.gradle\caches\8.11.1\transforms\1e603370a8016298f3e3dc6bdb605a82\transformed\profileinstaller-1.4.0\AndroidManifest.xml:36:13-44
+85            android:enabled="true"
+85-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\kunwa\.gradle\caches\8.11.1\transforms\1e603370a8016298f3e3dc6bdb605a82\transformed\profileinstaller-1.4.0\AndroidManifest.xml:37:13-35
+86            android:exported="true"
+86-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\kunwa\.gradle\caches\8.11.1\transforms\1e603370a8016298f3e3dc6bdb605a82\transformed\profileinstaller-1.4.0\AndroidManifest.xml:38:13-36
+87            android:permission="android.permission.DUMP" >
+87-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\kunwa\.gradle\caches\8.11.1\transforms\1e603370a8016298f3e3dc6bdb605a82\transformed\profileinstaller-1.4.0\AndroidManifest.xml:39:13-57
+88            <intent-filter>
+88-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\kunwa\.gradle\caches\8.11.1\transforms\1e603370a8016298f3e3dc6bdb605a82\transformed\profileinstaller-1.4.0\AndroidManifest.xml:40:13-42:29
+89                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+89-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\kunwa\.gradle\caches\8.11.1\transforms\1e603370a8016298f3e3dc6bdb605a82\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:17-91
+89-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\kunwa\.gradle\caches\8.11.1\transforms\1e603370a8016298f3e3dc6bdb605a82\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:25-88
+90            </intent-filter>
+91            <intent-filter>
+91-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\kunwa\.gradle\caches\8.11.1\transforms\1e603370a8016298f3e3dc6bdb605a82\transformed\profileinstaller-1.4.0\AndroidManifest.xml:43:13-45:29
+92                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+92-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\kunwa\.gradle\caches\8.11.1\transforms\1e603370a8016298f3e3dc6bdb605a82\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:17-85
+92-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\kunwa\.gradle\caches\8.11.1\transforms\1e603370a8016298f3e3dc6bdb605a82\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:25-82
+93            </intent-filter>
+94            <intent-filter>
+94-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\kunwa\.gradle\caches\8.11.1\transforms\1e603370a8016298f3e3dc6bdb605a82\transformed\profileinstaller-1.4.0\AndroidManifest.xml:46:13-48:29
+95                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+95-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\kunwa\.gradle\caches\8.11.1\transforms\1e603370a8016298f3e3dc6bdb605a82\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:17-88
+95-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\kunwa\.gradle\caches\8.11.1\transforms\1e603370a8016298f3e3dc6bdb605a82\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:25-85
+96            </intent-filter>
+97            <intent-filter>
+97-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\kunwa\.gradle\caches\8.11.1\transforms\1e603370a8016298f3e3dc6bdb605a82\transformed\profileinstaller-1.4.0\AndroidManifest.xml:49:13-51:29
+98                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+98-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\kunwa\.gradle\caches\8.11.1\transforms\1e603370a8016298f3e3dc6bdb605a82\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:17-95
+98-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\kunwa\.gradle\caches\8.11.1\transforms\1e603370a8016298f3e3dc6bdb605a82\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:25-92
+99            </intent-filter>
+100        </receiver>
+101    </application>
+102
+103</manifest>
