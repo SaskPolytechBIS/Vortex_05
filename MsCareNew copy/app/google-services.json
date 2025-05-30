@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "798507526288",
+    "project_id": "ms-care-45454",
+    "storage_bucket": "ms-care-45454.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:798507526288:android:b66a69052a70f7530cd015",
+        "android_client_info": {
+          "package_name": "com.example.mscarenew"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB32kZ8Kk-_Vmj47WkqJiBUEnzPoZPYG14"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

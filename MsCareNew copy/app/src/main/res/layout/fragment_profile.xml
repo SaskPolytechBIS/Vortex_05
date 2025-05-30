@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E3F2FD"
+    android:padding="16dp">
+
+<LinearLayout
+android:orientation="vertical"
+android:layout_width="match_parent"
+android:layout_height="wrap_content">
+
+<!-- Title -->
+<TextView
+    android:id="@+id/tvProfileTitle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Your Profile"
+    android:textSize="24sp"
+    android:textStyle="bold"
+    android:layout_marginBottom="16dp"/>
+
+<!-- Profile Picture Placeholder -->
+<ImageView
+    android:id="@+id/ivProfilePic"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:layout_gravity="center_horizontal"
+    android:src="@android:drawable/ic_menu_camera"
+    android:contentDescription="Profile Picture"
+    android:layout_marginBottom="8dp"/>
+
+<Button
+    android:id="@+id/btnChangePic"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Change Picture"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginBottom="24dp"/>
+
+<!-- First Name -->
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="First Name"
+    android:textStyle="bold"/>
+<EditText
+    android:id="@+id/etFirstName"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:inputType="textPersonName"
+    android:hint="Enter first name"
+    android:layout_marginBottom="12dp"/>
+
+<!-- Last Name -->
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Last Name"
+    android:textStyle="bold"/>
+<EditText
+    android:id="@+id/etLastName"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:inputType="textPersonName"
+    android:hint="Enter last name"
+    android:layout_marginBottom="12dp"/>
+
+<!-- Birthdate -->
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Birthdate"
+    android:textStyle="bold"/>
+<EditText
+    android:id="@+id/etBirthdate"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Select birthdate"
+    android:focusable="false"
+    android:clickable="true"
+    android:inputType="none"
+    android:layout_marginBottom="12dp"/>
+
+<!-- Age -->
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Age"
+    android:textStyle="bold"/>
+<EditText
+    android:id="@+id/etAge"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:inputType="number"
+    android:hint="Enter your age"
+    android:layout_marginBottom="12dp"/>
+
+<!-- Sex -->
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Sex"
+    android:textStyle="bold"/>
+<RadioGroup
+    android:id="@+id/rgSex"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginBottom="12dp">
+    <RadioButton
+        android:id="@+id/rbMale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Male"/>
+    <RadioButton
+        android:id="@+id/rbFemale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Female"
+        android:layout_marginStart="16dp"/>
+    <RadioButton
+        android:id="@+id/rbOther"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Other"
+        android:layout_marginStart="16dp"/>
+</RadioGroup>
+
+<!-- Address -->
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Address"
+    android:textStyle="bold"/>
+<EditText
+    android:id="@+id/etAddress"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:inputType="textPostalAddress"
+    android:hint="Enter your address"
+    android:layout_marginBottom="12dp"/>
+
+<!-- Email -->
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Email"
+    android:textStyle="bold"/>
+<EditText
+    android:id="@+id/etEmail"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:inputType="textEmailAddress"
+    android:hint="Enter your email"
+    android:layout_marginBottom="12dp"/>
+
+<!-- Phone -->
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Phone"
+    android:textStyle="bold"/>
+<EditText
+    android:id="@+id/etPhone"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:inputType="phone"
+    android:hint="Enter your phone number"
+    android:layout_marginBottom="12dp"/>
+
+<!-- Bio -->
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Bio"
+    android:textStyle="bold"/>
+<EditText
+    android:id="@+id/etBio"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Tell us about yourself"
+    android:inputType="textMultiLine"
+    android:minLines="3"
+    android:layout_marginBottom="24dp"/>
+
+<!-- Save Button -->
+<Button
+    android:id="@+id/btnSaveProfile"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Save Profile"/>
+
+</LinearLayout>
+    </ScrollView>

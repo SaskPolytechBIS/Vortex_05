@@ -1,0 +1,46 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Head circle -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="@android:color/black"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M12,7
+                          a3,3 0 1,0 0,6
+                          a3,3 0 1,0 0,-6"/>
+
+    <!-- Shoulders/body arc -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="@android:color/black"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M6,21
+                          v-2
+                          c0,-2.21 2.79,-4 6,-4
+                          s6,1.79 6,4
+                          v2"/>
+
+    <!-- “+” sign with a gap at the center -->
+    <!-- “+” sign with extra gap from the head and a center break -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="@android:color/black"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="
+        M21,8 L20,8
+        M18,8 L17,8
+        M19,6 L19,7
+        M19,9 L19,10    " />
+
+
+</vector>

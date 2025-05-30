@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Home -->
+    <item
+        android:id="@+id/nav_home"
+        android:name="com.example.mscarenew.ui.home.HomeFragment"
+        android:icon="@drawable/ic_menu_home"
+        android:title="@string/menu_home" />
+
+    <!-- Symptoms -->
+    <item
+        android:id="@+id/nav_symptoms"
+        android:name="com.example.mscarenew.ui.symptoms.SymptomsFragment"
+        android:icon="@drawable/ic_menu_symptoms"
+        android:title="@string/menu_symptoms" />
+    <!-- Symptoms -->
+    <item
+        android:id="@+id/nav_game"
+        android:name="com.example.mscarenew.ui.game.GameMenuFragment"
+        android:icon="@drawable/ic_menu_game"
+        android:title="@string/menu_game" />
+
+
+    <!-- MedTrack -->
+    <item
+        android:id="@+id/nav_medtrack"
+        android:name="com.example.mscarenew.ui.medtrack.MedTrackFragment"
+        android:icon="@drawable/ic_menu_medtrack"
+        android:iconTint="#009688"
+        android:title="@string/menu_medtrack" />
+
+    <!-- Notes -->
+    <item
+        android:id="@+id/nav_notes"
+        android:name="com.example.mscarenew.ui.notes.AppointmentNotesFragment"
+        android:icon="@drawable/ic_menu_notes"
+        android:title="@string/menu_notes" />
+
+
+</menu>

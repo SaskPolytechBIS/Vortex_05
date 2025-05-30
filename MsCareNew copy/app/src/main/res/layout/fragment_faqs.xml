@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E3F2FD"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvFaqTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Frequently Asked Questions"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- (Existing FAQs 1–10 omitted for brevity in this snippet) -->
+        <!-- FAQ 1 -->
+        <TextView
+            android:id="@+id/tvQ1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Q1: What is MSCare?"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"/>
+        <TextView
+            android:id="@+id/tvA1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MSCare is your personal medication management app that schedules reminders and logs doses."
+            android:layout_marginBottom="12dp"/>
+
+        <!-- FAQ 2 -->
+        <TextView
+            android:id="@+id/tvQ2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Q2: How do I add a new medication?"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"/>
+        <TextView
+            android:id="@+id/tvA2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tap the “+” button on the Medications screen, enter details, and save."
+            android:layout_marginBottom="12dp"/>
+
+        <!-- FAQ 3 -->
+        <TextView
+            android:id="@+id/tvQ3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Q3: Can I set multiple reminders per medication?"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"/>
+        <TextView
+            android:id="@+id/tvA3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Yes—when adding a medication, you can schedule as many daily reminders as you need."
+            android:layout_marginBottom="12dp"/>
+
+        <!-- FAQ 4 -->
+        <TextView
+            android:id="@+id/tvQ4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Q4: How do reminders work?"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"/>
+        <TextView
+            android:id="@+id/tvA4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MSCare uses Android’s notification system to alert you even if the app is closed."
+            android:layout_marginBottom="12dp"/>
+
+        <!-- FAQ 5 -->
+        <TextView
+            android:id="@+id/tvQ5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Q5: Is my data stored securely?"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"/>
+        <TextView
+            android:id="@+id/tvA5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="All data is stored locally on your device; nothing is shared without your permission."
+            android:layout_marginBottom="12dp"/>
+
+        <!-- FAQ 6 -->
+        <TextView
+            android:id="@+id/tvQ6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Q6: How can I edit or delete a reminder?"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"/>
+        <TextView
+            android:id="@+id/tvA6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Swipe left on a medication in the list and tap Edit or Delete."
+            android:layout_marginBottom="12dp"/>
+
+        <!-- FAQ 7 -->
+        <TextView
+            android:id="@+id/tvQ7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Q7: Can I view my medication history?"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"/>
+        <TextView
+            android:id="@+id/tvA7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Yes—open the Logs screen to see past check-offs and timestamps."
+            android:layout_marginBottom="12dp"/>
+
+        <!-- FAQ 8 -->
+        <TextView
+            android:id="@+id/tvQ8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Q8: Does MSCare support Android versions below 6.0?"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"/>
+        <TextView
+            android:id="@+id/tvA8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MSCare is supported on Android 7.0 (API 24) and above."
+            android:layout_marginBottom="12dp"/>
+
+        <!-- FAQ 9 -->
+        <TextView
+            android:id="@+id/tvQ9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Q9: Can I export my logs?"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"/>
+        <TextView
+            android:id="@+id/tvA9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Export will be available in the next release. Stay tuned!"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- FAQ 10 -->
+        <TextView
+            android:id="@+id/tvQ10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Q10: How do I contact support?"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Submit your own question -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Have a question we haven’t covered?"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/etQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Type your question here"
+            android:inputType="textMultiLine"
+            android:minLines="2"
+            android:background="@android:drawable/edit_text"
+            android:padding="8dp"
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/btnSubmitQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit Question"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Existing “View More FAQs Online” button -->
+        <Button
+            android:id="@+id/btnViewOnlineFaqs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View More FAQs Online" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_signin"
+            android:icon="@drawable/ic_menu_signin"
+            android:title="Sign in / Sign up" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_menu_profile"
+            android:title="Profile" />
+        <item
+            android:id="@+id/nav_faqs"
+            android:icon="@drawable/ic_menu_faqs"
+            android:title="FAQs" />
+        <item
+            android:id="@+id/nav_services"
+            android:icon="@drawable/ic_menu_services"
+            android:title="Mental Health Services" />
+
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_menu_about"
+            android:title="About MS Care" />
+    </group>
+    <item
+        android:id="@+id/nav_signout"
+        android:icon="@drawable/ic_menu_signout"
+        android:title="Sign Out"/>
+</menu>

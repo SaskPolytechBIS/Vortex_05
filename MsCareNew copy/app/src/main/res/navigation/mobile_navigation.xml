@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.mscarenew.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/nav_medtrack"
+        android:name="com.example.mscarenew.ui.medtrack.MedTrackFragment"
+        android:label="@string/menu_medtrack"
+        tools:layout="@layout/fragment_medtrack" />
+
+    <fragment
+        android:id="@+id/nav_notes"
+        android:name="com.example.mscarenew.ui.notes.AppointmentNotesFragment"
+        android:label="@string/menu_notes"
+        tools:layout="@layout/fragment_notes" />
+
+    <fragment
+        android:id="@+id/nav_symptoms"
+        android:name="com.example.mscarenew.ui.symptoms.SymptomsFragment"
+        android:label="@string/menu_symptoms"
+        tools:layout="@layout/fragment_symptoms_journaling" />
+
+    <fragment
+        android:id="@+id/nav_game"
+        android:name="com.example.mscarenew.ui.game.GameMenuFragment"
+        android:label="Game"
+        tools:layout="@layout/fragment_symptoms_journaling" />
+
+    <fragment
+        android:id="@+id/nav_signin"
+        android:name="com.example.mscarenew.ui.signin.SigninFragment"
+        android:label="Sign In"
+        tools:layout="@layout/fragment_signin">
+
+        <!-- THIS is the missing action -->
+        <action
+            android:id="@+id/action_signInFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+
+        <action
+            android:id="@+id/action_signInFragment_to_homeFragment"
+            app:destination="@id/nav_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.mscarenew.ui.signin.SignUpFragment"
+        android:label="Sign Up"
+        tools:layout="@layout/fragment_sign_up">
+
+        <!-- This is the missing action -->
+        <action
+            android:id="@+id/action_signUpFragment_to_signInFragment"
+            app:destination="@id/nav_signin" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.mscarenew.ui.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/nav_faqs"
+        android:name="com.example.mscarenew.ui.faqs.FAQsFragment"
+        android:label="FAQs"
+        tools:layout="@layout/fragment_faqs" />
+
+    <fragment
+        android:id="@+id/nav_services"
+        android:name="com.example.mscarenew.ui.services.ServiceFragment"
+        android:label="Services"
+        tools:layout="@layout/fragment_services" />
+
+
+    <fragment
+        android:id="@+id/nav_about"
+        android:name="com.example.mscarenew.ui.about.AboutFragment"
+        android:label="About Us"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/reactionTimeGameFragment"
+        android:name="com.example.mscarenew.ui.game.ReactionTimeGameFragment"
+        android:label="Reaction Time Game"
+        tools:layout="@layout/fragment_reaction_time_game" />
+    <fragment
+        android:id="@+id/neuroCycleGameFragment"
+        android:name="com.example.mscarenew.ui.game.NeuroCycleGameFragment"
+        android:label="Neuro-Cycle Game"
+        tools:layout="@layout/fragment_neuro_cycle_game" />
+    <fragment
+        android:id="@+id/mathChallengeGameFragment"
+        android:name="com.example.mscarenew.ui.game.MathChallengeGameFragment"
+        android:label="Math Challenge"
+        tools:layout="@layout/fragment_math_challenge_game" />
+    <fragment
+        android:id="@+id/memoryMatchGameFragment"
+        android:name="com.example.mscarenew.ui.game.MemoryMatchGameFragment"
+        android:label="Memory Match"
+        tools:layout="@layout/fragment_memory_match_game" />
+
+
+
+
+
+
+
+</navigation>

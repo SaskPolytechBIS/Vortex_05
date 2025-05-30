@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E3F2FD"
+    android:padding="16dp">
+
+<LinearLayout
+android:orientation="vertical"
+android:layout_width="match_parent"
+android:layout_height="wrap_content">
+
+<!-- Title -->
+<TextView
+    android:id="@+id/tvMHTitle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Mental Health Services"
+    android:textSize="24sp"
+    android:textStyle="bold"
+    android:layout_marginBottom="12dp"/>
+
+<!-- Advice heading -->
+<TextView
+    android:id="@+id/tvMHAdviceHeader"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Tips for Well-Being:"
+    android:textSize="18sp"
+    android:textStyle="bold"
+    android:layout_marginBottom="8dp"/>
+
+<!-- Advice list -->
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="• Practice mindfulness or meditation each day\n\n• Stay connected with friends and family\n\n• Get regular exercise and fresh air\n\n• Maintain a consistent sleep schedule\n\n• Seek professional support when you need it"
+    android:textSize="16sp"
+    android:lineSpacingExtra="4dp"
+    android:layout_marginBottom="20dp"/>
+
+<!-- Learn more link button -->
+<Button
+    android:id="@+id/btnLearnMoreMH"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Learn More Online" />
+
+</LinearLayout>
+    </ScrollView>

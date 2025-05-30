@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Medicine Name -->
+    <TextView
+        android:id="@+id/viewMed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:text="Medicine Name"/>
+
+    <!-- Dosage -->
+    <TextView
+        android:id="@+id/viewDos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        tools:text="Dosage: 500mg"/>
+
+    <!-- Times per day -->
+    <TextView
+        android:id="@+id/viewTimes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        tools:text="Times per day: 3"/>
+
+    <!-- Days of week (THIS WAS MISSING) -->
+    <TextView
+        android:id="@+id/viewDays"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        tools:text="Days: Monday, Wednesday, Friday"/>
+
+    <!-- Foods to avoid -->
+    <TextView
+        android:id="@+id/viewFood"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        tools:text="Foods to avoid: Dairy, Nuts"/>
+
+    <!-- Drinks to avoid -->
+    <TextView
+        android:id="@+id/viewDrink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        tools:text="Drinks to avoid: Alcohol, Caffeine"/>
+
+    <!-- Date -->
+    <TextView
+        android:id="@+id/viewShowDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        tools:text="Date: 2023-11-15"/>
+
+    <!-- Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnDel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:text="Delete"/>
+
+        <Button
+            android:id="@+id/btnOK"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="OK"/>
+    </LinearLayout>
+</LinearLayout>
