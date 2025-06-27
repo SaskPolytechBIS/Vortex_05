@@ -13,12 +13,6 @@ public class SymptomDbHelper {
     // Database information
     private SQLiteDatabase db;
 
-    /*
-       Next we have a public static final string for
-       each row/table that we need to refer to both
-       inside and outside this class
-   */
-
     // Column names
     public static final String TABLE_ROW_ID = "_id";
     public static final String TABLE_ROW_BODY_PART = "bodyPart";
@@ -27,48 +21,22 @@ public class SymptomDbHelper {
     public static final String TABLE_ROW_NOTES = "notes";
     public static final String TABLE_ROW_TIMESTAMP = "timestamp";
 
-
-    /*
-        Next we have a private static final strings for
-        each row/table that we need to refer to just
-        inside this class
-    */
-
     private static final String DB_NAME = "symptoms_db";
     private static final int DB_VERSION = 1;
     private static final String TABLE_SYMPTOMS = "symptoms";
 
-    // Constructor to Setup our DataManager
-    public SymptomDbHelper(Context context){
-
-        // STEP 2.
-        // Create an instance of our internal CustomSQLiteOpenHelper
-
+    public SymptomDbHelper(Context context) {
         CustomSQLiteOpenHelper helper = new CustomSQLiteOpenHelper(context);
-
-        // STEP 3.
-        // Get a writable database
-        // if the database doesn't exist yet
-        db = helper.getWritableDatabase(); // We can now use this database to access/ query the data
+        db = helper.getWritableDatabase();
     }
 
-    // Create a SQLiteOpenHelper subclass
-    // This is created when our DataManager is initialized
-
     private class CustomSQLiteOpenHelper extends SQLiteOpenHelper {
-
-        // If the version is newer than the DB file version
-        // this will trigger the onUpgrade()
         public CustomSQLiteOpenHelper(Context context) {
             super(context, DB_NAME, null, DB_VERSION);
         }
 
-        // This runs the first time the database is created
         @Override
         public void onCreate(SQLiteDatabase db) {
-
-            // We code whatever is needed to configure/ create the database
-            // We are creating a table for the symptoms records
             String newTableQueryString = "CREATE TABLE " + TABLE_SYMPTOMS + " ("
                     + TABLE_ROW_ID + " INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "
                     + TABLE_ROW_BODY_PART + " TEXT NOT NULL, "
@@ -76,24 +44,14 @@ public class SymptomDbHelper {
                     + TABLE_ROW_PAIN_LEVEL + " INTEGER NOT NULL, "
                     + TABLE_ROW_NOTES + " TEXT, "
                     + TABLE_ROW_TIMESTAMP + " TEXT NOT NULL);";
-
-
             db.execSQL(newTableQueryString);
         }
 
-        // This method only runs when we increment DB_VERSION
         @Override
         public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-            // Not needed in this app
-            // but we must still override it
-            // We can code whatever is needed to convert the old db to the new db
-            // drop tables and recreate them with new columns etc...
-
+            // No upgrade logic needed
         }
     }
-
-    // Step 4. Write any helper methods we want to manage the data access
-    // insert / select / delete etc..
 
     // Insert a symptom record
     public void insert(Symptom symptom) {
@@ -103,31 +61,26 @@ public class SymptomDbHelper {
                 TABLE_ROW_PAIN_LEVEL + ", " +
                 TABLE_ROW_NOTES + ", " +
                 TABLE_ROW_TIMESTAMP +
-                ") " +
-                "VALUES (" +
+                ") VALUES (" +
                 "'" + symptom.getBodyPart() + "', " +
                 "'" + symptom.getSymptomName() + "', " +
                 symptom.getPainLevel() + ", " +
                 "'" + symptom.getNotes() + "', '" +
                 symptom.getTimestamp() +
                 "');";
-
         Log.i("insert() = ", query);
-
-        // Best to use try catch ( but left oout for simplicity)
         db.execSQL(query);
     }
 
-    // Delete a symptom record
+    // Delete one record
     public void delete(int symptomId) {
         String query = "DELETE FROM " + TABLE_SYMPTOMS +
                 " WHERE " + TABLE_ROW_ID + " = " + symptomId;
-
         Log.i("delete() = ", query);
-        db.execSQL(query); // Deletes the records by the symptom id
+        db.execSQL(query);
     }
 
-    // Update a symptom record
+    // Update a record
     public void update(Symptom symptom) {
         String query = "UPDATE " + TABLE_SYMPTOMS + " SET " +
                 TABLE_ROW_BODY_PART + " = '" + symptom.getBodyPart() + "', " +
@@ -136,13 +89,11 @@ public class SymptomDbHelper {
                 TABLE_ROW_NOTES + " = '" + symptom.getNotes() + "', " +
                 TABLE_ROW_TIMESTAMP + " = '" + symptom.getTimestamp() +
                 "' WHERE " + TABLE_ROW_ID + " = " + symptom.getId();
-
         Log.i("update() = ", query);
         db.execSQL(query);
     }
 
-
-    // Get all symptom records
+    // Select all records
     public List<Symptom> selectAll() {
         List<Symptom> symptomList = new ArrayList<>();
         String query = "SELECT * FROM " + TABLE_SYMPTOMS;
@@ -157,7 +108,7 @@ public class SymptomDbHelper {
             String timestamp = cursor.getString(cursor.getColumnIndexOrThrow(TABLE_ROW_TIMESTAMP));
 
             Symptom symptom = new Symptom(bodyPart, symptomName, painLevel, notes, timestamp);
-            symptom.setId(id); // Use the setter method
+            symptom.setId(id);
             symptomList.add(symptom);
         }
 
@@ -165,11 +116,10 @@ public class SymptomDbHelper {
         return symptomList;
     }
 
-
-
-
-
-
-
-
+    // ✅ NEW METHOD: Delete all records
+    public void deleteAll() {
+        String query = "DELETE FROM " + TABLE_SYMPTOMS;
+        Log.i("deleteAll() = ", query);
+        db.execSQL(query);
+    }
 }

@@ -7,6 +7,12 @@ android {
     compileSdk = 35
 
     defaultConfig {
+
+        //added
+                vectorDrawables.useSupportLibrary = true
+
+
+
         applicationId = "com.example.mscarenew"
         minSdk = 35
         targetSdk = 35

@@ -74,7 +74,10 @@ public class HomeFragment extends Fragment {
 
     // Hydration & heat thresholds
     private static final int DAILY_GOAL = 8;             // glasses
-    private static final double REMIND_INTERVAL_HOURS = 0.30;
+
+
+    // TIME interval From reminder Notification
+    private static final double REMIND_INTERVAL_HOURS = 0.01;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,

@@ -206,7 +206,7 @@
             android:dropDownHeight="200dp"
             android:scrollbars="vertical"
             android:fadeScrollbars="false"
-            android:drawableRight="@drawable/baseline_keyboard_arrow_down_24"
+            android:drawableRight="@drawable/baseline_keyboard_arrow_up_24"
             android:paddingEnd="8dp"
             app:layout_constraintBottom_toTopOf="@+id/textView13"
             app:layout_constraintEnd_toEndOf="@+id/symptom_dropdown"

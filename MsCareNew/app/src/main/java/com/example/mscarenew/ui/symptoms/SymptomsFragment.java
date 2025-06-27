@@ -32,19 +32,18 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 
-public class SymptomsFragment extends Fragment{
-
+public class SymptomsFragment extends Fragment {
 
     Spinner bodyPartSpinner, symptomSpinner;
-    private List<Symptom> symptomlist= new ArrayList<>(); // the datasource
-    private SymptomAdapter mAdapter; // for the Recycler.ViewAdapter
+    private List<Symptom> symptomlist = new ArrayList<>(); // the datasource
+    private SymptomAdapter mAdapter;                        // for the Recycler.ViewAdapter
 
     // for Database
     private SymptomDbHelper dbHelper;
     private SQLiteDatabase db;
 
-    private RecyclerView recyclerView; // to reference the recyclerview UI Widget
-    HashMap<String, List<String>> symptomMap; // Map body parts to symptoms
+    private RecyclerView recyclerView;                      // to reference the recyclerview UI Widget
+    HashMap<String, List<String>> symptomMap;               // Map body parts to symptoms
 
     // Hashmap to store the reference for the images for the body part
     HashMap<String, Integer> bodyPartImageMap;
@@ -62,31 +61,29 @@ public class SymptomsFragment extends Fragment{
 
     @SuppressLint("SuspiciousIndentation")
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater,
+                             @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_symptoms_journaling, container, false);
 
         Button btnResults = root.findViewById(R.id.btnResults);
-
-        btnResults.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                SymptomResults symptomResults = new SymptomResults();
-                symptomResults.show(getChildFragmentManager(), "");
-            }
+        btnResults.setOnClickListener(v -> {
+            SymptomResults symptomResults = new SymptomResults();
+            symptomResults.show(getChildFragmentManager(), "");
         });
 
-        // Get the reference to the SymptomDbHelper
-        SymptomDbHelper dbHelper = new SymptomDbHelper(getContext());
+        // *** REPAIR: assign to the FIELD instead of shadowing it ***
+        dbHelper = new SymptomDbHelper(getContext());
+
         // Getting references to the UI widgets
         Button btnLog = root.findViewById(R.id.logging_button);
-        // Button btnResults = root.findViewById(R.id.results_button);
         bodyPartSpinner = root.findViewById(R.id.bodypart_dropdown);
-        symptomSpinner = root.findViewById(R.id.symptom_dropdown);
+        symptomSpinner  = root.findViewById(R.id.symptom_dropdown);
         SeekBar pain_range_bar = root.findViewById(R.id.pain_range_bar);
         TextView notes_and_comments = root.findViewById(R.id.notes_and_comments_textbox);
         TextView seekbarValue = root.findViewById(R.id.seekbar_value);
+
+        // Build your image-map
         bodyPartImageMap = new HashMap<>();
         bodyPartImageMap.put("", R.drawable.main_paper_doll_img);
         bodyPartImageMap.put("ForeHead", R.drawable.forehead_front);
@@ -120,9 +117,9 @@ public class SymptomsFragment extends Fragment{
         bodyPartImageMap.put("Feet Right Back", R.drawable.feet_right_back);
         bodyPartImageMap.put("Feet Left Back", R.drawable.feet_left_back);
 
-
+        // Build your symptom-map
         symptomMap = new HashMap<>();
-        symptomMap.put("",Arrays.asList(""));
+        symptomMap.put("", Arrays.asList(""));
         symptomMap.put("ForeHead", Arrays.asList("Optic Neuritis", "Headache", "Cognitive Dysfunction"));
         symptomMap.put("Side Head Front", Arrays.asList("Facial Pain", "Temporal Pain"));
         symptomMap.put("Side Head Back", Arrays.asList("Occipital Neuralgia", "Dizziness"));
@@ -154,8 +151,12 @@ public class SymptomsFragment extends Fragment{
         symptomMap.put("Feet Right Back", Arrays.asList("Toe Drag", "Sensory Loss"));
         symptomMap.put("Feet Left Back", Arrays.asList("Toe Drag", "Sensory Loss"));
 
-
-        ArrayAdapter<String> bodyPartAdapter = new ArrayAdapter<>(requireContext(), android.R.layout.simple_spinner_item, new ArrayList<>(symptomMap.keySet()));
+        // Body-Part spinner setup
+        ArrayAdapter<String> bodyPartAdapter = new ArrayAdapter<>(
+                requireContext(),
+                android.R.layout.simple_spinner_item,
+                new ArrayList<>(symptomMap.keySet())
+        );
         bodyPartAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         bodyPartSpinner.setAdapter(bodyPartAdapter);
 
@@ -171,81 +172,42 @@ public class SymptomsFragment extends Fragment{
                 if (imageResource != null) {
                     imageView.setImageResource(imageResource);
                 } else {
-                    imageView.setImageResource(R.drawable.main_paper_doll_img); // Set a default image if not found
+                    imageView.setImageResource(R.drawable.main_paper_doll_img);
                 }
             }
 
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) { }
+            @Override public void onNothingSelected(AdapterView<?> parent) { }
         });
 
-        btnLog.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Load the recycler view with some data in a loop
+        btnLog.setOnClickListener(v -> {
+            String selectedBodyPart = bodyPartSpinner.getSelectedItem().toString();
+            String selectedSymptom  = symptomSpinner.getSelectedItem().toString();
+            int painLevel           = pain_range_bar.getProgress();
+            String notes            = notes_and_comments.getText().toString();
+            String timestamp        = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+                    .format(new Date());
 
-                // Save Symptom Data
-                // 1. Get Selected Values from Spinners
+            Symptom newSymptom = new Symptom(
+                    selectedBodyPart, selectedSymptom, painLevel, notes, timestamp
+            );
 
-                String selectedBodyPart = bodyPartSpinner.getSelectedItem().toString();
-                String selectedSymptom = symptomSpinner.getSelectedItem().toString();
-
-                // 2. Get Pain Level from SeekBar
-                int painLevel = pain_range_bar.getProgress();
-
-                // 3. Get Notes from EditText
-                String notes = notes_and_comments.getText().toString();
-
-                // 4. Get Current Date and Time
-                //SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault());
-                //String timestamp = dateFormat.format(new Date());
-                // 4. Alternative: Get Timestamp
-                //long timestamp = System.currentTimeMillis();
-
-                String timestamp = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date());
-                System.out.println("Log entry at: " + timestamp);
-                // Create a new Symptom object
-                Symptom newSymptom = new Symptom(selectedBodyPart, selectedSymptom, painLevel, notes, timestamp);
-
-
-
-                // Database Code to insert the data into the database through the helper class that we have built
-
-
-                // Insert the symptom into the database using the SymptomDbHelper
-                try {
-                    dbHelper.insert(newSymptom);
-                } catch (SQLException e) {
-                    Log.e("SymptomsFragment", "Error inserting symptom: " + e.getMessage());
-                    Toast.makeText(requireContext(), "Error logging symptom", Toast.LENGTH_SHORT).show();
-                }
-
-
-
-                // Create an instance of the Dialog Fragment
-                // Opens Up a dialog that says the Symptom is logged successfully
-                symptomDialog myDialog = new symptomDialog();
-
-                // show the dialog using this Activity's Fragment Manager
-                myDialog.show(getActivity().getSupportFragmentManager(), "123");
+            try {
+                dbHelper.insert(newSymptom);
+            } catch (SQLException e) {
+                Log.e("SymptomsFragment", "Error inserting symptom: " + e.getMessage());
+                Toast.makeText(requireContext(), "Error logging symptom", Toast.LENGTH_SHORT).show();
             }
+
+            symptomDialog myDialog = new symptomDialog();
+            myDialog.show(getActivity().getSupportFragmentManager(), "123");
         });
 
         pain_range_bar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+            @Override public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 seekbarValue.setText(String.format("%d", progress));
             }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-                // (Code if default value is to be displayed when the fragment is being interacted on touch )
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-                // (Optional)
-            }
+            @Override public void onStartTrackingTouch(SeekBar seekBar) { }
+            @Override public void onStopTrackingTouch(SeekBar seekBar) { }
         });
 
         return root;
@@ -253,10 +215,12 @@ public class SymptomsFragment extends Fragment{
 
     private void updateSymptomSpinner(String bodyPart) {
         List<String> symptoms = symptomMap.get(bodyPart);
-        ArrayAdapter<String> symptomAdapter = new ArrayAdapter<>(requireContext(), android.R.layout.simple_spinner_item, symptoms);
+        ArrayAdapter<String> symptomAdapter = new ArrayAdapter<>(
+                requireContext(),
+                android.R.layout.simple_spinner_item,
+                symptoms
+        );
         symptomAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         symptomSpinner.setAdapter(symptomAdapter);
     }
-
-
 }
